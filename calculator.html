@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Calculator</title>
+  <style media="screen">
+    body
+    {
+      background-color:#efefef;
+      background-image:url('');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    div
+    {
+      background-color:#64d5c6;
+    }
+    .box
+    {
+      height:530px;
+      width:323px;
+      margin-left:100px;
+      border-radius:20px;
+    }
+    .displaydesign
+    {
+      background-color:#64d5c6;
+      height:110px;
+      width:320px;
+      border:none;
+      font-size:30px;
+      font-weight:700;
+      color:#fff;
+      text-align:right;
+      border-top-left-radius:20px;
+      border-top-right-radius:20px;
+    }
+    .buttondesign
+    {
+      width:60px;
+      height:60px;
+      background:white;
+      font-size:20px;
+      font-weight:700;
+      border:none;
+      border-radius:50%;
+      cursor: pointer;
+      margin: 20px 5px 0px 10px;
+      outline: none;
+    }
+  </style>
+  <script type="text/javascript">
+  function display(val)
+  {
+    document.getElementById('final_output').value+=val;
+  }
+  function slove()
+  {
+    var expr=document.getElementById('final_output').value;
+    var solun=eval(expr);
+    document.getElementById('final_output').value=solun;
+  }
+  function clr()
+  {
+    document.getElementById('final_output').value = "0";
+    document.getElementById.value('final_output') = "";
+    return;
+       }
+function ce()
+{
+  document.getElementById('final_output').value=""
+}
+  </script>
+  </head>
+  <body>
+     <h1>Simple Calculator</h1>
+     <div class="box">
+       <input type="text" class="displaydesign" id="final_output"><br/>
+       <button type="button" class="buttondesign" onclick="clr()">C</button>
+       <button type="button" class="buttondesign" onclick="ce">CE</button>
+       <button type="button" class="buttondesign" onclick="display('%')">%</button>
+       <button type="button" class="buttondesign" onclick="display('/')">/</button><br/>
+       <button type="button" class="buttondesign" onclick="display('7')">7</button>
+       <button type="button" class="buttondesign" onclick="display('8')">8</button>
+       <button type="button" class="buttondesign" onclick="display('9')">9</button>
+       <button type="button" class="buttondesign" onclick="display('*')">*</button><br/>
+       <button type="button" class="buttondesign" onclick="display('4')">4</button>
+       <button type="button" class="buttondesign" onclick="display('5')">5</button>
+       <button type="button" class="buttondesign" onclick="display('6')">6</button>
+       <button type="button" class="buttondesign" onclick="display('-')">-</button><br/>
+       <button type="button" class="buttondesign" onclick="display('1')">1</button>
+       <button type="button" class="buttondesign" onclick="display('2')">2</button>
+       <button type="button" class="buttondesign" onclick="display('3')">3</button>
+       <button type="button" class="buttondesign" onclick="display('+')">+</button><br/>
+       <button type="button" class="buttondesign" onclick="display('0')">0</button>
+       <button type="button" class="buttondesign" onclick="display('00')">00</button>
+       <button type="button" class="buttondesign" onclick="display('.')">.</button>
+       <button type="button" class="buttondesign" onclick="slove()">=</button>
+     </div>
+  </body>
+</html>
